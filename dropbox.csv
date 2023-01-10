@@ -1,8 +1,10 @@
-we
-sd
-s
-d
-sd
-sd
-sd
-sd
+import dropbox
+dropbox_token=""
+dropbox_path="exam/test.txt"
+computer_path="test.txt"
+
+client=dropbox.Dropbox(dropbox_token)
+print("Successfully Linked DropBox account")
+
+client.files_upload(open(computer_path,"rb").read(),dropbox_path)
+print("Successfully uploaded")
